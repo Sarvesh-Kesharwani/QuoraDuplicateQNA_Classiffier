@@ -1,0 +1,114 @@
+{
+    "sourceFile": "app.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1723281090475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723281095572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import streamlit as st \r\n+\r\n+st.title('Duplicate ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281101203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,3 @@\n import streamlit as st \r\n \r\n-st.title('Duplicate ')\n-import streamlit as st \r\n-\r\n-st.title('')\n\\ No newline at end of file\n+st.title('Duplicate Question Prediction')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281112312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import streamlit as st \r\n+\r\n+st.title('Duplicate Prediction')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281120316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import streamlit as st \r\n+\r\n+st.title('Duplicate Question Prediction')\r\n"
+                },
+                {
+                    "date": 1723281127449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,4 @@\n import streamlit as st \r\n \r\n-st.title('Duplicate Question Prediction')\r\n-import streamlit as st \r\n+st.title('Duplicate Question Predictor')\r\n \r\n-st.title('Duplicate Prediction')\n-import streamlit as st \r\n-\r\n\\ No newline at end of file\n-st.title('Duplicate Question Prediction')\n"
+                },
+                {
+                    "date": 1723281174005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n"
+                },
+                {
+                    "date": 1723281184129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n+pickle.load(model.pkl)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281193273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n+pickle.load(r'model.pkl', 'rb')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281201812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n+model = pickle.load(r'model.pkl', 'rb')\r\n+\r\n+model.predict()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281208288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+st.input('Enter the question:')\r\n+model = pickle.load(r'model.pkl', 'rb')\r\n+\r\n+model.predict()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281214989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,9 @@\n import streamlit as st \r\n import pickle \r\n \r\n st.title('Duplicate Question Predictor')\r\n-st.input('Enter the question:')\r\n-model = pickle.load(r'model.pkl', 'rb')\r\n+input_question = st.input('Enter the question:')\r\n \r\n-model.predict()\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n model = pickle.load(r'model.pkl', 'rb')\r\n \r\n-model.predict()\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n-pickle.load(r'model.pkl', 'rb')\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n-pickle.load(model.pkl)\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n-import streamlit as st \r\n-\r\n\\ No newline at end of file\n-st.title('Duplicate Question Predictor')\n+model.predict()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281225944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n input_question = st.input('Enter the question:')\r\n \r\n model = pickle.load(r'model.pkl', 'rb')\r\n \r\n-model.predict()\n\\ No newline at end of file\n+result = model.predict(input_question)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281235240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+input_question = st.input('Enter the question:')\r\n+\r\n+model = pickle.load(r'model.pkl', 'rb')\r\n+\r\n+prediction_result = model.predict(input_question)\r\n+\r\n+if prediction_result == 1:\r\n+    st.write('The question is a duplicate')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281242351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import streamlit as st \r\n+import pickle \r\n+\r\n+st.title('Duplicate Question Predictor')\r\n+input_question = st.input('Enter the question:')\r\n+\r\n+model = pickle.load(r'model.pkl', 'rb')\r\n+\r\n+prediction_result = model.predict(input_question)\r\n+\r\n+if prediction_result == 1:\r\n+    st.write('The question is a duplicate')\r\n+else:\r\n+    st.write('The question is not a duplicate')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281575315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,14 @@\n import streamlit as st \r\n import pickle \r\n \r\n st.title('Duplicate Question Predictor')\r\n-input_question = st.input('Enter the question:')\r\n+input_question = st.in('Enter the question:')\r\n \r\n model = pickle.load(r'model.pkl', 'rb')\r\n \r\n prediction_result = model.predict(input_question)\r\n \r\n if prediction_result == 1:\r\n     st.write('The question is a duplicate')\r\n else:\r\n-    st.write('The question is not a duplicate')\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-input_question = st.input('Enter the question:')\r\n-\r\n-model = pickle.load(r'model.pkl', 'rb')\r\n-\r\n-prediction_result = model.predict(input_question)\r\n-\r\n-if prediction_result == 1:\r\n-    st.write('The question is a duplicate')\n-import streamlit as st \r\n-import pickle \r\n-\r\n-st.title('Duplicate Question Predictor')\r\n-input_question = st.input('Enter the question:')\r\n-\r\n-model = pickle.load(r'model.pkl', 'rb')\r\n-\r\n\\ No newline at end of file\n-result = model.predict(input_question)\n+    st.write('The question is not a duplicate')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723281582312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import streamlit as st \r\n import pickle \r\n \r\n st.title('Duplicate Question Predictor')\r\n-input_question = st.in('Enter the question:')\r\n+input_question = st.inpu('Enter the question:')\r\n \r\n model = pickle.load(r'model.pkl', 'rb')\r\n \r\n prediction_result = model.predict(input_question)\r\n"
+                },
+                {
+                    "date": 1723281618970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,25 @@\n-import streamlit as st \r\n-import pickle \r\n+import streamlit as st\r\n+import pickle\r\n \r\n+# Set the title of the app\r\n st.title('Duplicate Question Predictor')\r\n-input_question = st.inpu('Enter the question:')\r\n \r\n-model = pickle.load(r'model.pkl', 'rb')\r\n+# Input for the user to enter a question\r\n+input_question = st.text_input('Enter the question:')\r\n \r\n-prediction_result = model.predict(input_question)\r\n\\ No newline at end of file\n+# Load the model\r\n+with open('model.pkl', 'rb') as file:\r\n+    model = pickle.load(file)\r\n \r\n-if prediction_result == 1:\r\n-    st.write('The question is a duplicate')\r\n+# Check if the input question is not empty\r\n+if input_question:\r\n+    # Make a prediction\r\n+    prediction_result = model.predict([input_question])  # Wrap input in a list\r\n+\r\n+    # Display the result based on the prediction\r\n+    if prediction_result[0] == 1:  # Access the first element of the prediction\r\n+        st.write('The question is a duplicate')\r\n+    else:\r\n+        st.write('The question is not a duplicate')\r\n else:\r\n-    st.write('The question is not a duplicate')\n+    st.write('Please enter a question to get a prediction.')\r\n"
+                },
+                {
+                    "date": 1723283077639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import streamlit as st\r\n import pickle\r\n-\r\n+import sklearn\r\n # Set the title of the app\r\n st.title('Duplicate Question Predictor')\r\n \r\n # Input for the user to enter a question\r\n"
+                },
+                {
+                    "date": 1723283088859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import streamlit as st\r\n import pickle\r\n-import sklearn\r\n+from sklearn.feature_extraction.text import TfidfVectorizer\r\n # Set the title of the app\r\n st.title('Duplicate Question Predictor')\r\n \r\n # Input for the user to enter a question\r\n"
+                },
+                {
+                    "date": 1723283094933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import streamlit as st\r\n+import pickle\r\n+from sklearn.feature_extraction.text import TfidfVectorizer\r\n+\r\n+# Set the title of the app\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n+# Input for the user to enter a question\r\n+input_question = st.text_input('Enter the question:')\r\n+\r\n+\r\n+\r\n+# Load the model\r\n+with open('model.pkl', 'rb') as file:\r\n+    model = pickle.load(file)\r\n+\r\n+# Check if the input question is not empty\r\n+if input_question:\r\n+    # Make a prediction\r\n+    prediction_result = model.predict([input_question])  # Wrap input in a list\r\n+\r\n+    # Display the result based on the prediction\r\n+    if prediction_result[0] == 1:  # Access the first element of the prediction\r\n+        st.write('The question is a duplicate')\r\n+    else:\r\n+        st.write('The question is not a duplicate')\r\n+else:\r\n+    st.write('Please enter a question to get a prediction.')\r\n"
+                },
+                {
+                    "date": 1723283100821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n st.title('Duplicate Question Predictor')\r\n \r\n # Input for the user to enter a question\r\n input_question = st.text_input('Enter the question:')\r\n+# vecotrizing input text\r\n \r\n \r\n-\r\n # Load the model\r\n with open('model.pkl', 'rb') as file:\r\n     model = pickle.load(file)\r\n \r\n@@ -25,29 +25,4 @@\n     else:\r\n         st.write('The question is not a duplicate')\r\n else:\r\n     st.write('Please enter a question to get a prediction.')\r\n-import streamlit as st\r\n-import pickle\r\n-from sklearn.feature_extraction.text import TfidfVectorizer\r\n-# Set the title of the app\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n-# Input for the user to enter a question\r\n-input_question = st.text_input('Enter the question:')\r\n-\r\n-# Load the model\r\n-with open('model.pkl', 'rb') as file:\r\n-    model = pickle.load(file)\r\n-\r\n-# Check if the input question is not empty\r\n-if input_question:\r\n-    # Make a prediction\r\n-    prediction_result = model.predict([input_question])  # Wrap input in a list\r\n-\r\n-    # Display the result based on the prediction\r\n-    if prediction_result[0] == 1:  # Access the first element of the prediction\r\n-        st.write('The question is a duplicate')\r\n-    else:\r\n-        st.write('The question is not a duplicate')\r\n-else:\r\n-    st.write('Please enter a question to get a prediction.')\r\n"
+                },
+                {
+                    "date": 1723283107364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n st.title('Duplicate Question Predictor')\r\n \r\n # Input for the user to enter a question\r\n input_question = st.text_input('Enter the question:')\r\n-# vecotrizing input text\r\n+# vectorizing input text\r\n+TfidfVectorizer()\r\n \r\n \r\n # Load the model\r\n with open('model.pkl', 'rb') as file:\r\n"
+                },
+                {
+                    "date": 1723283113772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import streamlit as st\r\n+import pickle\r\n+from sklearn.feature_extraction.text import TfidfVectorizer\r\n+\r\n+# Set the title of the app\r\n+st.title('Duplicate Question Predictor')\r\n+\r\n+# Input for the user to enter a question\r\n+input_question = st.text_input('Enter the question:')\r\n+# vectorizing input text\r\n+tfidf = TfidfVectorizer()\r\n+input_question = tfidf.fit_transform([input_question])\r\n+\r\n+\r\n+# Load the model\r\n+with open('model.pkl', 'rb') as file:\r\n+    model = pickle.load(file)\r\n+\r\n+# Check if the input question is not empty\r\n+if input_question:\r\n+    # Make a prediction\r\n+    prediction_result = model.predict([input_question])  # Wrap input in a list\r\n+\r\n+    # Display the result based on the prediction\r\n+    if prediction_result[0] == 1:  # Access the first element of the prediction\r\n+        st.write('The question is a duplicate')\r\n+    else:\r\n+        st.write('The question is not a duplicate')\r\n+else:\r\n+    st.write('Please enter a question to get a prediction.')\r\n"
+                },
+                {
+                    "date": 1723283235149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,11 @@\n \r\n # Input for the user to enter a question\r\n input_question = st.text_input('Enter the question:')\r\n # vectorizing input text\r\n-tfidf = TfidfVectorizer()\r\n+tfidf = TfidfVectorizer(ma)\r\n input_question = tfidf.fit_transform([input_question])\r\n \r\n-\r\n # Load the model\r\n with open('model.pkl', 'rb') as file:\r\n     model = pickle.load(file)\r\n \r\n@@ -27,33 +26,4 @@\n     else:\r\n         st.write('The question is not a duplicate')\r\n else:\r\n     st.write('Please enter a question to get a prediction.')\r\n-import streamlit as st\r\n-import pickle\r\n-from sklearn.feature_extraction.text import TfidfVectorizer\r\n-\r\n-# Set the title of the app\r\n-st.title('Duplicate Question Predictor')\r\n-\r\n-# Input for the user to enter a question\r\n-input_question = st.text_input('Enter the question:')\r\n-# vectorizing input text\r\n-TfidfVectorizer()\r\n-\r\n-\r\n-# Load the model\r\n-with open('model.pkl', 'rb') as file:\r\n-    model = pickle.load(file)\r\n-\r\n-# Check if the input question is not empty\r\n-if input_question:\r\n-    # Make a prediction\r\n-    prediction_result = model.predict([input_question])  # Wrap input in a list\r\n-\r\n-    # Display the result based on the prediction\r\n-    if prediction_result[0] == 1:  # Access the first element of the prediction\r\n-        st.write('The question is a duplicate')\r\n-    else:\r\n-        st.write('The question is not a duplicate')\r\n-else:\r\n-    st.write('Please enter a question to get a prediction.')\r\n"
+                }
+            ],
+            "date": 1723281090475,
+            "name": "Commit-0",
+            "content": "import streamlit as st \r\n\r\nst.title('')"
+        }
+    ]
+}
